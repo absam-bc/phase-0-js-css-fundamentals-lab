@@ -3,7 +3,7 @@ const path = require('path');
 const { JSDOM } = require('jsdom');
 
 const htmlFilePath = path.resolve(__dirname, '../index.html');
-const cssFilePath = path.resolve(__dirname, '../style.css');
+const cssFilePath = path.resolve(__dirname, '../styles.css');
 let dom;
 let document;
 
@@ -23,7 +23,7 @@ describe('CSS Lab Tests', () => {
   test('should link the CSS file', () => {
     const link = document.querySelector('link[rel="stylesheet"]');
     expect(link).not.toBeNull();
-    expect(link.getAttribute('href')).toBe('style.css');
+    expect(link.getAttribute('href')).toBe('styles.css');
   });
 
   describe('Navigation Bar', () => {
